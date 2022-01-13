@@ -41,7 +41,7 @@ part 'models/config.dart';
 part 'models/state.dart';
 part 'models/sensors.dart';
 part 'models/headless_event.dart';
-part 'models/notification.dart';
+//part 'models/notification.dart';
 part 'models/sql_query.dart';
 part 'models/authorization.dart';
 part 'models/device_info.dart';

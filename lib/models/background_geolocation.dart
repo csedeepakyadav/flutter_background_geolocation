@@ -130,8 +130,9 @@ class BackgroundGeolocation {
       const EventChannel(_EVENT_CHANNEL_CONNECTIVITYCHANGE);
   static const EventChannel _eventChannelEnabledChange =
       const EventChannel(_EVENT_CHANNEL_ENABLEDCHANGE);
-  static const EventChannel _eventChannelNotificationAction =
-      const EventChannel(_EVENT_CHANNEL_NOTIFICATIONACTION);
+
+  // static const EventChannel _eventChannelNotificationAction = const EventChannel(_EVENT_CHANNEL_NOTIFICATIONACTION);
+
   static const EventChannel _eventChannelAuthorization =
       const EventChannel(_EVENT_CHANNEL_AUTHORIZATION);
 
@@ -1474,15 +1475,15 @@ class BackgroundGeolocation {
   /// });
   /// ```
   ///
-  static void onNotificationAction(Function(String) callback) {
-    if (_eventsNotificationAction == null) {
-      _eventsNotificationAction = _eventChannelNotificationAction
-          .receiveBroadcastStream()
-          .map((dynamic action) => action as String);
-    }
-    _registerSubscription(
-        _eventsNotificationAction!.listen(callback), callback);
-  }
+  // static void onNotificationAction(Function(String) callback) {
+  //   if (_eventsNotificationAction == null) {
+  //     _eventsNotificationAction = _eventChannelNotificationAction
+  //         .receiveBroadcastStream()
+  //         .map((dynamic action) => action as String);
+  //   }
+  //   _registerSubscription(
+  //       _eventsNotificationAction!.listen(callback), callback);
+  // }
 
   /// Registers a function to receive events from __`BackgroundGeolocation`__ while in the *terminated* ("Headless") state.
   ///
